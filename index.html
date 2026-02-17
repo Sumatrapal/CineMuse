@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CineMuse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="cinema-bg"></div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <h1>CineMuse 🎬</h1>
+    <p id="tagline">Discover movies effortlessly</p>
+  </header>
+
+<section class="mood-section">
+  <h2>What’s your mood tonight?</h2>
+  <div class="mood-options">
+    <button class="mood-btn" data-mood="happy">😊 Happy</button>
+    <button class="mood-btn" data-mood="romantic">💖 Romantic</button>
+    <button class="mood-btn" data-mood="intense">🔥 Intense</button>
+    <button class="mood-btn" data-mood="chill">🌧 Chill</button>
+  </div>
+</section>
+
+  <!-- FILTERS -->
+  <section class="filters">
+    <select id="industry">
+      <option value="">Movie Type</option>
+      <option value="hollywood">Hollywood</option>
+      <option value="bollywood">Bollywood</option>
+      <option value="south">South Indian</option>
+      <option value="bengali">Bengali</option>
+    </select>
+
+    <select id="genre">
+      <option value="">Genre</option>
+      <option value="28">Action</option>
+      <option value="35">Comedy</option>
+      <option value="18">Drama</option>
+      <option value="10749">Romance</option>
+      <option value="27">Horror</option>
+    </select>
+
+    <button onclick="getMovies()">Get Movies</button>
+  </section>
+
+<p class="helper-text">
+  Tell us your vibe. We'll suggest something worth watching.
+</p>
+
+<p id="recommendationReason" class="recommendation-reason hidden"></p>
+
+  <!-- MOVIE GRID -->
+  <main id="movies" class="movies"></main>
+
+  <button id="exploreMore" class="explore-btn hidden">
+  Explore more movies
+</button>
+
+
+  <!-- MODAL -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">✕</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
