@@ -20,7 +20,7 @@ CineMuse focuses on **emotion-first discovery**, blending design and functionali
 
 ## 🚀 Live Demo
 
-🔗 Live App: (Add your Vercel deployment link here)
+🔗 Live App: https://cine-muse-henna.vercel.app/
 
 ---
 
