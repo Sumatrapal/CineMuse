@@ -1,32 +1,32 @@
-# 🎬 CineMuse  
+# CineMuse  
 *A Mood-Based Movie Recommendation Web App*
 
 ---
 
-## 🌟 Overview
+## Overview
 
 CineMuse is a cinematic, mood-driven movie recommendation web application that helps users discover films based on how they feel.
 
 Instead of endlessly browsing, users can:
 
-- 🎭 Select their mood  
-- 🎬 Choose movie type (Hollywood, Bollywood, etc.)  
-- ✨ Get curated suggestions  
-- 🔎 Explore more if they want  
+-  Select their mood  
+-  Choose movie type (Hollywood, Bollywood, etc.)  
+-  Get curated suggestions  
+-  Explore more if they want  
 
 CineMuse focuses on **emotion-first discovery**, blending design and functionality into a refined experience.
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 
-🔗 Live App: https://cine-muse-henna.vercel.app/
+ Live App: https://cine-muse-henna.vercel.app/
 
 ---
 
-## 🧠 Core Features
+## Core Features
 
-### 🎭 Mood-First Interaction
+### Mood-First Interaction
 Users start by selecting their mood:
 - Happy
 - Romantic
@@ -37,14 +37,14 @@ Mood automatically influences genre filtering.
 
 ---
 
-### 🎬 Hybrid Recommendation Model
+### Hybrid Recommendation Model
 1. First 8 movies appear as curated suggestions.
 2. “Explore More” enables infinite scroll.
 3. No repeated movies are shown.
 
 ---
 
-### 💡 “Because You Chose…” Explanation
+### “Because You Chose…” Explanation
 CineMuse explains why movies are suggested:
 
 > Suggested because you're feeling Romantic in Bollywood.
@@ -53,7 +53,7 @@ This makes recommendations feel intentional and personalized.
 
 ---
 
-### ✨ Cinematic UI
+### Cinematic UI
 - Light premium theme  
 - Soft blurred cinematic background  
 - Floating glass-style UI  
@@ -62,7 +62,7 @@ This makes recommendations feel intentional and personalized.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - HTML5  
 - CSS3  
@@ -72,7 +72,7 @@ This makes recommendations feel intentional and personalized.
 
 ---
 
-## 🔌 API
+## API
 
 This project uses the **TMDB (The Movie Database) API** for fetching movie data.
 
@@ -82,7 +82,7 @@ For production-level security, a backend proxy would be recommended.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 CineMuse/
@@ -93,7 +93,7 @@ CineMuse/
 
 ---
 
-## 🎯 Future Enhancements
+## Future Enhancements
 
 - Hidden Gems mode  
 - “Surprise Me” button  
@@ -104,7 +104,7 @@ CineMuse/
 
 ---
 
-## 📌 Why CineMuse?
+## Why CineMuse?
 
 Most platforms focus on filtering.
 
@@ -118,12 +118,12 @@ It aims to make movie discovery:
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 Built as a frontend product experiment focused on UX and recommendation design.
 
 ---
 
-## 📜 License
+## License
 
 This project is for educational and portfolio purposes.
