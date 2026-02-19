@@ -37,7 +37,9 @@ function getMovies() {
     return;
   }
 
-  const reasonEl = document.getElementById("recommendationReason");
+/* RECOMMENDATION REASON */
+
+const reasonEl = document.getElementById("recommendationReason");
 
 let reasonText = "🎬 Suggested";
 
