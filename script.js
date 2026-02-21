@@ -37,6 +37,8 @@ function getMovies() {
     return;
   }
 
+/**/
+
 /* RECOMMENDATION REASON */
 
 const reasonEl = document.getElementById("recommendationReason");
