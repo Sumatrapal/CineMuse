@@ -82,6 +82,7 @@ reasonEl.classList.remove("hidden");
     `&region=${region}` +
     `&sort_by=popularity.desc`;
 
+    /* If mood is selected, it overrides genre. Otherwise, use genre if selected. */
   /* Mood overrides genre */
   let finalGenre = null;
 
