@@ -37,7 +37,7 @@ function getMovies() {
     return;
   }
 
-
+/* RECOMMENDATION REASON DISPLAY */
 
 /* RECOMMENDATION REASON */
 
