@@ -2,75 +2,187 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CineMuse</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineMuse — Find Your Movie Mood</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="cinema-bg"></div>
+
+  <!-- CINEMATIC BACKGROUND -->
+  <div class="cinema-bg"></div>
+  <div class="noise"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">CineMuse<span>•</span></div>
+
+    <div class="nav-label">
+      YOUR MOVIE MOOD
+    </div>
+  </nav>
+
 
   <!-- HERO -->
   <header class="hero">
-    <h1>CineMuse 🎬</h1>
-    <p id="tagline">Discover movies effortlessly</p>
+
+    <p class="eyebrow">A CINEMATIC DISCOVERY EXPERIENCE</p>
+
+    <h1>
+      Find your next<br>
+      <span>movie mood.</span>
+    </h1>
+
+    <p class="tagline">
+      Tell CineMuse how you feel.<br>
+      We'll find something worth watching.
+    </p>
+
   </header>
 
-<section class="mood-section">
-  <h2>What’s your mood tonight?</h2>
-  <div class="mood-options">
-    <button class="mood-btn" data-mood="happy">😊 Happy</button>
-    <button class="mood-btn" data-mood="romantic">💖 Romantic</button>
-    <button class="mood-btn" data-mood="intense">🔥 Intense</button>
-    <button class="mood-btn" data-mood="chill">🌧 Chill</button>
-  </div>
-</section>
 
-  <!-- FILTERS -->
-  <section class="filters">
-    <select id="industry">
-      <option value="">Movie Type</option>
-      <option value="hollywood">Hollywood</option>
-      <option value="bollywood">Bollywood</option>
-      <option value="south">South Indian</option>
-      <option value="bengali">Bengali</option>
-    </select>
+  <!-- MOOD -->
+  <section class="mood-section">
 
-    <select id="genre">
-      <option value="">Genre</option>
-      <option value="28">Action</option>
-      <option value="35">Comedy</option>
-      <option value="18">Drama</option>
-      <option value="10749">Romance</option>
-      <option value="27">Horror</option>
-    </select>
+    <p class="section-label">01 — YOUR MOOD</p>
 
-    <button onclick="getMovies()">Get Movies</button>
+    <h2>What are you feeling tonight?</h2>
+
+    <div class="mood-options">
+
+      <button class="mood-btn" data-mood="happy">
+        <span class="mood-icon">😊</span>
+        <span>Happy</span>
+      </button>
+
+      <button class="mood-btn" data-mood="romantic">
+        <span class="mood-icon">💖</span>
+        <span>Romantic</span>
+      </button>
+
+      <button class="mood-btn" data-mood="intense">
+        <span class="mood-icon">🔥</span>
+        <span>Intense</span>
+      </button>
+
+      <button class="mood-btn" data-mood="chill">
+        <span class="mood-icon">🌧</span>
+        <span>Chill</span>
+      </button>
+
+    </div>
+
   </section>
 
-<p class="helper-text">
-  Tell us your vibe. We'll suggest something worth watching.
-</p>
 
-<p id="recommendationReason" class="recommendation-reason hidden"></p>
+  <!-- FILTERS -->
+  <section class="filters-section">
+
+    <p class="section-label">02 — REFINE YOUR NIGHT</p>
+
+    <div class="filters">
+
+      <div class="filter-group">
+        <label for="industry">Movie Type</label>
+
+        <select id="industry">
+          <option value="">Any Movie Type</option>
+          <option value="hollywood">Hollywood</option>
+          <option value="bollywood">Bollywood</option>
+          <option value="south">South Indian</option>
+          <option value="bengali">Bengali</option>
+        </select>
+      </div>
 
 
+      <div class="filter-group">
+        <label for="genre">Genre</label>
 
-  <!-- MOVIE GRID -->
+        <select id="genre">
+          <option value="">Any Genre</option>
+          <option value="28">Action</option>
+          <option value="35">Comedy</option>
+          <option value="18">Drama</option>
+          <option value="10749">Romance</option>
+          <option value="27">Horror</option>
+        </select>
+      </div>
+
+    </div>
+
+
+    <div class="action-area">
+
+      <button class="surprise-btn" onclick="surpriseMe()">
+        <span>✨</span>
+        Surprise Me
+      </button>
+
+      <button class="get-btn" onclick="getMovies()">
+        Get Movies
+        <span>→</span>
+      </button>
+
+    </div>
+
+    <p class="helper-text">
+      Choose your mood, refine your preferences, or let CineMuse decide.
+    </p>
+
+  </section>
+
+
+  <!-- RECOMMENDATION REASON -->
+  <p id="recommendationReason" class="recommendation-reason hidden"></p>
+
+
+  <!-- MOVIES -->
   <main id="movies" class="movies"></main>
 
+
+  <!-- EXPLORE -->
   <button id="exploreMore" class="explore-btn hidden">
-  Explore more movies
-</button>
+    Explore more movies
+    <span>↓</span>
+  </button>
 
 
-  <!-- MODAL -->
-  <div id="modal" class="modal hidden">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()">✕</span>
-      <div id="modalBody"></div>
+  <!-- SURPRISE MODAL -->
+  <div id="surpriseModal" class="modal hidden">
+
+    <div class="surprise-content">
+
+      <button class="modal-close" onclick="closeSurpriseModal()">✕</button>
+
+      <p class="surprise-label">TONIGHT'S PICK</p>
+
+      <div id="surpriseBody"></div>
+
+      <button class="surprise-again" onclick="surpriseMe()">
+        ✨ Surprise Me Again
+      </button>
+
     </div>
+
   </div>
 
+
+  <!-- MOVIE MODAL -->
+  <div id="modal" class="modal hidden">
+
+    <div class="modal-content">
+
+      <button class="modal-close" onclick="closeModal()">✕</button>
+
+      <div id="modalBody"></div>
+
+    </div>
+
+  </div>
+
+
   <script src="script.js"></script>
+
 </body>
 </html>
