@@ -9,7 +9,7 @@ html {
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: #08090d;
+  background: #d10404;
   color: #f4f1ea;
   min-height: 100vh;
   overflow-x: hidden;
@@ -71,7 +71,7 @@ body::before {
   background:
     linear-gradient(
       180deg,
-      rgba(8, 9, 13, 0.55),
+      rgba(6, 7, 13, 0.55),
       rgba(8, 9, 13, 0.94)
     ),
     url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=2070&auto=format&fit=crop")
@@ -175,7 +175,7 @@ body::before {
 
   letter-spacing: 0.2em;
 
-  color: #777b87;
+  color: #2a2f3d;
 }
 
 
